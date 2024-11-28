@@ -2,37 +2,110 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>图片列表</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轻盐简语</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-  <ul class="image-list" id="imageList">
-  </ul>
+    <h3>1.小程序二维码</h3>
+    <img class="xiaochengxu" src="images/小程序.png">
+    <h3>2.客服二维码（长按二维码即可添加）</h3>
+    <ul class="image-list" id="imageList"></ul>
+    <h3>3.群二维码（长按二维码即可添加）</h3>
 
-  <script>
-    // 假设图片路径列表
-    var imagePaths = [
-      "images/1.jpg",
-      "images/2.jpg",
-      "images/3.jpg",
-      "images/1.jpg",
-      "images/2.jpg",
-      "images/3.jpg",
-    ];
 
-    var imageList = document.getElementById('imageList');
+    <h3>微信群</h3>
+    <h4>广科群聊请长按下面二维码添加</h4>
+    <ul class="image-list" id="imageList_qun_guangke"></ul>
 
-    for (var i = 0; i < imagePaths.length; i++) {
-      var li = document.createElement('li');
-      var img = document.createElement('img');
-      img.src = imagePaths[i];
-      li.appendChild(img);
-      imageList.appendChild(li);
-    }
-  </script>
+    <h4>城职群聊请长按下面二维码添加</h4>
+    <ul class="image-list" id="imageList_qun_chengzhi"></ul>
+
+    <h4>QQ群</h4>
+    <ul class="image-list" id="imageList_qun_qq"></ul>
+
+
+    <script>
+
+
+        // 客服二维码
+        var imagePaths = [
+            "images/1客服二维码/1.jpg",
+            "images/1客服二维码/2.jpg",
+            "images/1客服二维码/3.jpg",
+            "images/1客服二维码/1.jpg",
+            "images/1客服二维码/2.jpg",
+            "images/1客服二维码/3.jpg",
+            "images/1客服二维码/1.jpg",
+            "images/1客服二维码/2.jpg",
+            "images/1客服二维码/3.jpg",
+        ];
+
+        // 广科群二维码
+        var imagePaths_qun_guangke = [
+            "images/2广科群二维码/1.jpg",
+            "images/2广科群二维码/2.jpg",
+            "images/2广科群二维码/3.jpg",
+        ];
+
+        // 城职群二维码
+        var imagePaths_qun_chengzhi = [
+            "images/3城职群二维码/1.jpg",
+            "images/3城职群二维码/2.jpg",
+            "images/3城职群二维码/3.jpg",
+        ];
+
+        // QQ群二维码
+        var imagePaths_qun_qq = [
+            "images/6QQ群二维码/1.png",
+            "images/6QQ群二维码/2.png",
+            "images/6QQ群二维码/3.png",
+        ];
+
+        var imageList = document.getElementById('imageList');
+        var imageList_qun_guangke = document.getElementById('imageList_qun_guangke');
+        var imageList_qun_chengzhi = document.getElementById('imageList_qun_chengzhi');
+        var imageList_qun_qq = document.getElementById('imageList_qun_qq');
+
+        //客服
+        for (var i = 0; i < imagePaths.length; i++) {
+            var li = document.createElement('li');
+            var img = document.createElement('img');
+            img.src = imagePaths[i];
+            li.appendChild(img);
+            imageList.appendChild(li);
+        }
+
+
+        // 广科群
+        for (var i = 0; i < imagePaths_qun_guangke.length; i++) {
+            var li = document.createElement('li');
+            var img = document.createElement('img');
+            img.src = imagePaths_qun_guangke[i];
+            li.appendChild(img);
+            imageList_qun_guangke.appendChild(li);
+        }
+
+        // 城职群
+        for (var i = 0; i < imagePaths_qun_guangke.length; i++) {
+            var li = document.createElement('li');
+            var img = document.createElement('img');
+            img.src = imagePaths_qun_chengzhi[i];
+            li.appendChild(img);
+            imageList_qun_chengzhi.appendChild(li);
+        }
+
+        // QQ群
+        for (var i = 0; i < imagePaths_qun_qq.length; i++) {
+            var li = document.createElement('li');
+            var img = document.createElement('img');
+            img.src = imagePaths_qun_qq[i];
+            li.appendChild(img);
+            imageList_qun_qq.appendChild(li);
+        }
+    </script>
 </body>
 
 </html>
