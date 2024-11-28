@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图片列表</title>
+  <style>
+   
+  </style>
+</head>
+
+<body>
+  <ul class="image-list" id="imageList">
+  </ul>
+
+  <script>
+    // 假设图片路径列表
+    var imagePaths = [
+      "images/1.jpg",
+      "images/2.jpg"
+    ];
+
+    var imageList = document.getElementById('imageList');
+
+    for (var i = 0; i < imagePaths.length; i++) {
+      var li = document.createElement('li');
+      var img = document.createElement('img');
+      img.src = imagePaths[i];
+      li.appendChild(img);
+      imageList.appendChild(li);
+    }
+  </script>
+</body>
+
+</html>
