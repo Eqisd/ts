@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  text {
+    font-weight: bold;
+  }
+
+  button{
+    padding-left: 10px;
+  }
+
+
+
+.qq-list li {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.xiaochengxu{
+    width: 30%;
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+.image-list li {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;  /* 为了能相对定位添加的文字 */
+  }
+
+.image-list img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+
+.image-list li:hover span {
+    display: block;  /* 鼠标悬停时显示文字 */
+}
+
+@media (max-width: 768px) {  /* 当屏幕宽度小于或等于 768px 时 */
+  .image-list li {
+      width: 20%;  /* 每个图片占 45% 的宽度，这样一行差不多能放两个 */
+    }
+  }
+
+@media (max-width: 480px) {  /* 当屏幕宽度小于或等于 480px 时 */
+  .image-list li {
+      width: 30%;  /* 每个图片占 90% 的宽度，这样一行差不多能放一个 */
+    }
+  }
