@@ -24,7 +24,24 @@
     <ul class="image-list" id="imageList_qun_chengzhi"></ul>
 
     <h3>QQ群</h3>
-    <ul class="image-list" id="imageList_qun_qq"></ul>
+    <!-- <ul class="image-list" id="imageList_qun_qq"></ul> -->
+    <ul class="qq-list">
+        <li>
+            <text class="qq-text">1.</text>
+            <text class="qq-text" id="qq1">670100277</text>
+            <button onclick="copyText('qq1')">复制Q群号</button>
+        </li>
+        <li>
+            <text class="qq-text">2.</text>
+            <text class="qq-text" id="qq2">928505734</text>
+            <button onclick="copyText('qq2')">复制Q群号</button>
+        </li>
+        <li>
+            <text class="qq-text">3.</text>
+            <text class="qq-text" id="qq3">926039235</text>
+            <button onclick="copyText('qq3')">复制Q群号</button>
+        </li>
+    </ul>
 
 
     <script>
@@ -98,12 +115,28 @@
         }
 
         // QQ群
-        for (var i = 0; i < imagePaths_qun_qq.length; i++) {
-            var li = document.createElement('li');
-            var img = document.createElement('img');
-            img.src = imagePaths_qun_qq[i];
-            li.appendChild(img);
-            imageList_qun_qq.appendChild(li);
+        // for (var i = 0; i < imagePaths_qun_qq.length; i++) {
+        //     var li = document.createElement('li');
+        //     var img = document.createElement('img');
+        //     img.src = imagePaths_qun_qq[i];
+        //     li.appendChild(img);
+        //     imageList_qun_qq.appendChild(li);
+        // }
+
+        function copyText(id) {
+            var text = document.getElementById(id).innerHTML;
+            // 创建一个新的 textarea 元素
+            var textArea = document.createElement('textarea');
+            // 将获取到的文本设置为 textarea 的值
+            textArea.value = text;
+            // 将 textarea 添加到文档的 body 中
+            document.body.appendChild(textArea);
+            // 选中 textarea 中的文本
+            textArea.select();
+            // 执行复制操作
+            document.execCommand('copy');
+            // 从文档的 body 中移除 textarea
+            document.body.removeChild(textArea);
         }
     </script>
 </body>

@@ -3,6 +3,22 @@ body {
     background-color: #f0f0f0;
   }
 
+  text {
+    font-weight: bold;
+  }
+
+  button{
+    padding-left: 10px;
+  }
+
+
+
+.qq-list li {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
 .xiaochengxu{
     width: 30%;
     width: 30%;
