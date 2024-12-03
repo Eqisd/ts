@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -27,19 +28,22 @@
     <!-- <ul class="image-list" id="imageList_qun_qq"></ul> -->
     <ul class="qq-list">
         <li>
-            <text class="qq-text">1.</text>
+            <text class="qq-text">QQ群1：</text>
             <text class="qq-text" id="qq1">670100277</text>
             <button onclick="copyText('qq1')">复制Q群号</button>
+            <span id="copyStatus1"></span>
         </li>
         <li>
-            <text class="qq-text">2.</text>
+            <text class="qq-text">QQ群2：</text>
             <text class="qq-text" id="qq2">928505734</text>
             <button onclick="copyText('qq2')">复制Q群号</button>
+            <span id="copyStatus2"></span>
         </li>
         <li>
-            <text class="qq-text">3.</text>
+            <text class="qq-text">QQ群3：</text>
             <text class="qq-text" id="qq3">926039235</text>
             <button onclick="copyText('qq3')">复制Q群号</button>
+            <span id="copyStatus3"></span>
         </li>
     </ul>
 
@@ -137,8 +141,22 @@
             document.execCommand('copy');
             // 从文档的 body 中移除 textarea
             document.body.removeChild(textArea);
+
+            let str = id;
+            let num = str[str.length - 1];
+
+            // 显示复制成功的提示
+            var copyStatus = document.getElementById('copyStatus'+num);
+            copyStatus.innerHTML = '复制成功';
+            copyStatus.style.color = 'red';
+
+            // 3 秒后隐藏提示
+            setTimeout(function () {
+                copyStatus.innerHTML = '';
+            }, 3000);
+
+
         }
     </script>
 </body>
 
-</html>
